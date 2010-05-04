@@ -1,0 +1,11 @@
+It's helper to make CRUD test on ActiveScaffold controller.
+Example:
+-put file to test/
+-in your test file(in example I'm using FactoryGirl plugin):
+class UserTest < ActionController::TestCase
+  include ::ActiveScaffoldTests
+  
+  def setup
+    @record = Factory(:user)
+  end
+end
